@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "322477432756",
+    "firebase_url": "https://last-todoapp-default-rtdb.firebaseio.com",
+    "project_id": "last-todoapp",
+    "storage_bucket": "last-todoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322477432756:android:53ed020c9b52c868221ce1",
+        "android_client_info": {
+          "package_name": "com.example.todos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322477432756-28sd1hag5qleli5vu4a7nrotqp0v9jqn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnku3cDtRAiKtwT4Y3zxuiAAF35ZS5ZaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322477432756-28sd1hag5qleli5vu4a7nrotqp0v9jqn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
