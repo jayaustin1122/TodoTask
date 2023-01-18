@@ -10,4 +10,6 @@
     <string name="email">Email</string>
     <string name="sign_in">Sign In</string>
     <string name="not_registered_yet">Not Registered Yet?</string>
+    <string name="add_task">Add Task</string>
+    <string name="add">add</string>
 </resources>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mainbg"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.SigninFragment">
+    tools:context=".fragments_Activities.SigninFragment">
 
     <Button
         android:id="@+id/btnLogin"
@@ -39,11 +39,11 @@
         android:id="@+id/tvCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/myfont"
         android:text="Create Account?"
         android:textColor="@color/Blue"
         android:textSize="15sp"
-        android:fontFamily="@font/myfont"
-        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textField2" />
 
@@ -79,6 +79,7 @@
         android:layout_height="wrap_content"
         android:background="@color/fulltrans"
         android:hint="@string/password"
+        android:inputType="textPassword"
         app:endIconMode="password_toggle"
         app:layout_constraintTop_toBottomOf="@+id/textField"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
@@ -93,4 +94,17 @@
             android:textColor="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+     <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:indeterminate="@color/orange"
+         android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

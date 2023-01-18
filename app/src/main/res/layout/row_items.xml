@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/white"
+    android:elevation="10dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/listLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/fulltrans"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/btnImgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="1dp"
+                android:backgroundTint="@color/fulltrans"
+                app:srcCompat="@drawable/ic_baseline_delete_24"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTitle"
+                android:fontFamily="@font/myfont"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:text="Title"
+                android:paddingStart="10dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDesc"
+            android:fontFamily="@font/myfont"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:text="Description"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+
+            <TextView
+                android:id="@+id/textViewNoteDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/myfont"
+                android:text="20/20/20"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNoteTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewNoteDate"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-26dp"
+                android:fontFamily="@font/myfont"
+                android:text="1:00"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/textViewNoteDate"
+                app:layout_constraintStart_toEndOf="@+id/textViewNoteDate"
+                app:layout_constraintTop_toTopOf="@+id/textViewNoteDate"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

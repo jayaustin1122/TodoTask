@@ -1,4 +1,4 @@
-package com.example.todos.fragments
+package com.example.todos.fragments_Activities
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,6 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.todos.R
 import com.example.todos.databinding.FragmentSigninBinding
-import com.example.todos.databinding.FragmentSignupBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class SigninFragment : Fragment() {
@@ -43,7 +42,7 @@ class SigninFragment : Fragment() {
             val pass = binding.etPassword.text.toString().trim()
 
             if (email.isNotEmpty() && pass.isNotEmpty()){
-
+                binding.progressBar.visibility = View.VISIBLE
                 auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener {
                     if (it.isSuccessful) {
                         Toast.makeText(context,"Login Successfully", Toast.LENGTH_SHORT).show()
@@ -51,8 +50,11 @@ class SigninFragment : Fragment() {
                     } else {
                         Toast.makeText(context,it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
+                    binding.progressBar.visibility = View.GONE
                 }
 
+            }else{
+                Toast.makeText(context,"Please input password/email", Toast.LENGTH_SHORT).show()
             }
         }
     }

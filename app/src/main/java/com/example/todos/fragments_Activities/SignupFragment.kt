@@ -1,4 +1,4 @@
-package com.example.todos.fragments
+package com.example.todos.fragments_Activities
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -48,15 +48,21 @@ class SignupFragment : Fragment() {
 
             if (email.isNotEmpty() && pass.isNotEmpty()&& verifyPass.isNotEmpty()){
                 if (pass == verifyPass){
+                     binding.progressBar.visibility = View.VISIBLE
                      auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
                          if (it.isSuccessful) {
                              Toast.makeText(context,"Registered Successfully", Toast.LENGTH_SHORT).show()
-                             navControl.navigate(R.id.action_signupFragment_to_homeFragment)
+                             navControl.navigate(R.id.action_signupFragment_to_signinFragment)
                          } else {
                              Toast.makeText(context,it.exception?.message, Toast.LENGTH_SHORT).show()
                          }
+                         binding.progressBar.visibility = View.GONE
                      }
+                }else{
+                    Toast.makeText(context,"Password Doesn't match", Toast.LENGTH_SHORT).show()
                 }
+            }else{
+                Toast.makeText(context,"Dont Leave a Blank Text Input", Toast.LENGTH_SHORT).show()
             }
         }
     }
